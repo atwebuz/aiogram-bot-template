@@ -12,6 +12,18 @@ async def bot_help(message: types.Message):
     
     await message.answer(text)
 
+@dp.message_handler(CommandHelp(), state=PesonalData.myemail)
+async def bot_help(message: types.Message):
+    text = ("emailni qaytadan kiriting iltimos!")
+    
+    await message.answer(text)
+
+@dp.message_handler(CommandHelp(), state=PesonalData.myphone)
+async def bot_help(message: types.Message):
+    text = ("raqamni qaytadan kiriting iltimos!")
+    
+    await message.answer(text)
+
 
 @dp.message_handler(CommandHelp())
 async def bot_help(message: types.Message):
