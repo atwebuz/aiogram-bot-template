@@ -6,7 +6,7 @@ from loader import dp
 from states.personalData import PesonalData
 
 
-@dp.message_handler(Command("anketa"))
+@dp.message_handler(Command("anketa"), text='UZB')
 async def enter_test(message: types.Message):
     await message.answer("Toliq ism kiriting")
     await PesonalData.myname.set()
